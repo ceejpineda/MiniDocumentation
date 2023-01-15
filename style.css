@@ -1,0 +1,96 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+#wrapper{
+    width: 100vw;
+    height: 100vh;
+    padding: 30px;
+    background-color: #121212;
+}
+.sidebar, .mainContent{
+    display: inline-block;
+    vertical-align: top;
+    text-align: center;
+    height: 100%;
+    padding: 30px;
+    background-color: #F2F2F2;
+}
+.sidebar{
+    width: 20%;
+    height: 100%;
+    margin: auto;
+    border: 3px dotted #f2f2f2;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+}
+.mainContent{
+    width: 80%;
+    height: 100%;
+    overflow-y: scroll;
+}
+    .mainContent>div{
+        width: 900px;
+        height: 300px;
+        margin: 20px auto;
+        border: 3px dashed #121212;
+        border-radius: 10px;
+        
+    }
+.sidebar a{
+    height: calc(100%/17 - 5px);
+    margin: 5px auto;
+    width: 150px;
+    line-height: calc(200% - 5px);
+}
+.sidebar a, .buttonContainer a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    border: 2px solid black;
+    color: black;
+    font-weight: bold;
+    background-color: #f2f2f2;
+}
+a:hover{
+    background-color: forestgreen;
+}
+
+.mainContent>div{
+    padding: 30px;
+    width: 100%;
+}
+    .mainContent>div>p{
+        height: 10%;
+    }
+.buttonContainer{
+    display: inline-block;
+    width: 25%;
+    height: 45%;
+    vertical-align: middle;
+}
+    .buttonContainer a{
+        margin: auto;
+        width: 50%;
+        height: 30%;
+    }
+.contentContainer{
+    display: inline-block;
+    vertical-align: middle;
+    text-align: left;
+    padding: 15px;
+    width: 75%;
+    height: 90%;
+}
+.contentContainer>p{
+    display: block;
+    margin-top: 15px;
+}
+.contentContainer{
+    outline: 1px solid red;
+}
+a{
+    box-shadow: 2px 2px black;
+}
