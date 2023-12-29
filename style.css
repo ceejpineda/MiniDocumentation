@@ -4,6 +4,9 @@
     box-sizing: border-box;
     font-family: 'Courier New', Courier, monospace;
 }
+.bg-light-red{
+    background-color: rgb(250, 100, 100);
+}
 #wrapper{
     width: 100vw;
     height: 100vh;
@@ -18,53 +21,49 @@
     padding: 30px;
     background-color: #F2F2F2;
 }
-.sidebar{
-    width: 20%;
-    height: 100%;
-    margin: auto;
-    border: 3px dotted #f2f2f2;
-    border-top-left-radius: 15px;
-    border-bottom-left-radius: 15px;
-}
-.mainContent{
-    width: 80%;
-    height: 100%;
-    overflow-y: scroll;
-}
+    .sidebar a, .buttonContainer a{
+        display: block;
+        text-align: center;
+        text-decoration: none;
+        border: 2px solid black;
+        color: black;
+        font-weight: bold;
+        background-color: #f2f2f2;
+    }
+    .sidebar{
+        width: 20%;
+        height: 100%;
+        margin: auto;
+            border: 3px dotted #f2f2f2;
+            border-top-left-radius: 15px;
+            border-bottom-left-radius: 15px;
+        }
+            .sidebar a{
+                height: calc(100%/17 - 5px);
+                margin: 5px auto;
+                width: 150px;
+                line-height: calc(200% - 5px);
+            }
+        .mainContent{
+            width: 80%;
+            height: 100%;
+            overflow-y: scroll;
+        }
+            .mainContent>div{
+                width: 900px;
+                height: 300px;
+                margin: 20px auto;
+                border: 3px dashed #121212;
+                border-radius: 10px;
+                
+            }
     .mainContent>div{
-        width: 900px;
-        height: 300px;
-        margin: 20px auto;
-        border: 3px dashed #121212;
-        border-radius: 10px;
-        
+        padding: 30px;
+        width: 100%;
     }
-.sidebar a{
-    height: calc(100%/17 - 5px);
-    margin: 5px auto;
-    width: 150px;
-    line-height: calc(200% - 5px);
-}
-.sidebar a, .buttonContainer a{
-    display: block;
-    text-align: center;
-    text-decoration: none;
-    border: 2px solid black;
-    color: black;
-    font-weight: bold;
-    background-color: #f2f2f2;
-}
-a:hover{
-    background-color: forestgreen;
-}
-
-.mainContent>div{
-    padding: 30px;
-    width: 100%;
-}
-    .mainContent>div>p{
-        height: 10%;
-    }
+        .mainContent>div>p{
+            height: 10%;
+        }
 .buttonContainer{
     display: inline-block;
     width: 25%;
@@ -72,25 +71,37 @@ a:hover{
     vertical-align: middle;
 }
     .buttonContainer a{
-        margin: auto;
+        margin: 15px auto;
         width: 50%;
         height: 30%;
+    }
+    .buttonContainer p{
+        font-size: 25px;
+    }
+    .buttonContainer img{
+        object-fit: contain;
+        height: 100px;
     }
 .contentContainer{
     display: inline-block;
     vertical-align: middle;
     text-align: left;
-    padding: 15px;
+    padding: 15px 50px;
     width: 75%;
     height: 90%;
 }
-.contentContainer>p{
-    display: block;
-    margin-top: 15px;
-}
-.contentContainer{
-    outline: 1px solid red;
-}
+    .contentContainer>p{
+        display: block;
+        margin-top: 15px;
+        font-size: 20px;
+    }
 a{
     box-shadow: 2px 2px black;
 }
+    a:hover{
+        background-color: forestgreen;
+    }
+#clicked, #showMe, #slideDownMe, #fadeInMe{
+    display: none;
+}
+

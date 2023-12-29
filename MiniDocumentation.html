@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#clickButton").click(function(){
+                $("#clicked").show();
+            })
+            $("#hideButton").click(function(){
+                $("#hideMe").hide();
+            })
+            $("#showButton").click(function(){
+                $("#showMe").show();
+            })
+            $("#toggleButton").click(function(){
+                $("#toggleMe").toggle();
+            })
+            $("#slideDownButton").click(function(){
+                $("#slideDownMe").slideDown();
+            })
+            $("#slideUpButton").click(function(){
+                $("#slideUpMe").slideUp();
+            })
+            $("#slideToggleButton").click(function(){
+                $("#slideToggleMe").slideToggle();
+            })
+            $("#fadeInButton").click(function(){
+                $("#fadeInMe").fadeIn("slow");
+            })
+            $("#fadeOutButton").click(function(){
+                $("#fadeOutMe").fadeOut("slow");
+            })
+            $("#addClassButton").click(function(){
+                $("#addClass").addClass("bg-light-red");
+            })
+            $("#beforeButton").click(function(){
+                $("#beforeMe").before("<img src='./assets/three-3.webp'>");
+            })
+            $("#afterButton").click(function(){
+                $("#afterMe").after("<img src='./assets/three-4.webp'>");
+            })
+            $("#appendButton").click(function(){
+                $("#appendMe").after("88");
+            })
+            $("#htmlButton").click(function(){
+                $("#htmlMe").html("<button>I'm now a button. Thanks!</button>");
+            })
+            $("#attrButton").click(function(){
+                $("#attrHere").append($("#attrButton").attr("data-secret"));
+            })
+            $("#valButton").click(function(){
+                $("#valHere").text($("#inputVal").val());
+            })
+            $("#textButton").click(function(){
+                $("#textHere").append($("#textButton").text());
+            })
+        })
+    </script>
+    <title>jQuery Mini Documentation</title>
+</head>
+<body>
+    <div id="wrapper">
+        <div class="sidebar">
+            <a href="#click">.click()</a>
+            <a href="#hide">.hide()</a>
+            <a href="#show">.show</a>
+            <a href="#toggle">.toggle()</a>
+            <a href="#slideDown">.slideDown()</a>
+            <a href="#slideUp">.slideUp()</a>
+            <a href="#slideToggle">.slideToggle()</a>
+            <a href="#fadeIn">.fadeIn()</a>
+            <a href="#fadeOut">.fadeOut()</a>
+            <a href="#addClass">.addClass()</a>
+            <a href="#before">.before()</a>
+            <a href="#after">.after()</a>
+            <a href="#append">.append()</a>
+            <a href="#html">.html()</a>
+            <a href="#attr">.attr()</a>
+            <a href="#val">.val()</a>
+            <a href="#text">.text()</a>
+        </div><!--
+     --><div class="mainContent">
+            <h1>Mini Documentation</h1>
+            <div id="click">
+                <h2>click</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="clickButton">click</a>
+                    <p id="clicked">Oh you clicked me :)</p>
+                </div><!--
+             --><div class="contentContainer">
+                    <p>Binds an event handler to the "click" JavaScript event, or trigger that event on an element.</p>
+                    <p>Example: Click a button will do a certain event or run a certain function.</p>
+                </div> 
+            </div>
+            <div id="hide">
+                <h2>hide</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="hideButton">hide</a>
+                    <p id="hideMe">Say Goodbye before you click!</p>
+                </div><!--
+             --><div class="contentContainer">
+                    <p>Hides the matched elements on the jQuery selector.</p>
+                    <p>Example: Hide the sentence below the button.</p>
+                </div>
+            </div>
+            <div id="show">
+                <h2>show</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="showButton">show</a>
+                    <p id="showMe">Hi There!</p>
+                </div><!--
+             --><div class="contentContainer">
+                    <p>Shows the matched elements on the jQuery selector that are not displayed currently.</p>
+                    <p>Example: Show the a hidden message below the button.</p>
+                </div> 
+            </div>
+            <div id="toggle">
+                <h2>toggle</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="toggleButton">toggle</a>
+                    <p id="toggleMe">Toggle Me!</p>
+                </div><!--
+             --><div class="contentContainer">
+                    <p>Toggles the visibility of the selected elements. (Show/Hide)</p>
+                    <p>Example: Toggle the visibility of the phrase below the button.</p>
+                </div> 
+            </div>
+            <div id="slideDown">
+                <h2>slideDown</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="slideDownButton">slide down</a>
+                    <img id="slideDownMe" src="./assets/cena.jpg" alt="bean">
+                </div><!--
+             --><div class="contentContainer">
+                    <p>The slideDown() method slides-down (shows) the selected elements.</p>
+                    <p>Example: Show the hidden element under the button with a slide-down effect.</p>
+                </div> 
+            </div>
+            <div id="slideUp">
+                <h2>slideUp</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="slideUpButton">slide up</a>
+                    <img id="slideUpMe" src="./assets/cena.jpg" alt="bean">
+                </div><!--
+             --><div class="contentContainer">
+                    <p>The slideUp() method slides-up (hides) the selected elements.</p>
+                    <p>Example: Hide the element under the button with a slide-up effect.</p>
+                </div> 
+            </div>
+            <div id="slideToggle">
+                <h2>slideToggle</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="slideToggleButton">toggle slide</a>
+                    <img id="slideToggleMe" src="./assets/bean.jpg" alt="bean">
+                </div><!--
+             --><div class="contentContainer">
+                    <p>Toggle the visibility slideUp()/slideDown() methods of the selected elements.</p>
+                    <p>Example: Show/Hide the element under the button with a slide-up/slide-down effect.</p>
+                </div> 
+            </div>
+            <div id="fadeIn">
+                <h2>fadeIn</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="fadeInButton">fade in</a>
+                    <img id="fadeInMe" src="./assets/fade.jpg" alt="fade">
+                </div><!--
+             --><div class="contentContainer">
+                    <p>The jQuery fadeIn() method is used to fade in a hidden element</p>
+                    <p>Example: Show the hidden element under the button with the fade-in effect.</p>
+                </div> 
+            </div>
+            <div id="fadeOut">
+                <h2>fadeOut</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="fadeOutButton">fade out</a>
+                    <img id="fadeOutMe" src="./assets/fade.jpg" alt="fade">
+                </div><!--
+             --><div class="contentContainer">
+                    <p>The jQuery fadeOut() method is used to fade out a visible element</p>
+                    <p>Example: Show the hidden element under the button with the fade-in effect.</p>
+                </div> 
+            </div>
+            <div id="addClass">
+                <h2>addClass</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="addClassButton">add class</a>
+                </div><!--
+             --><div class="contentContainer">
+                    <p>The addClass() method adds one or more class names to the selected elements. This method does not remove existing class attributes, it only adds one or more class names to the class attribute.</p>
+                    <p>Example: Add the class "bg-light-red" to this container.</p>
+                </div> 
+            </div>
+            <div id="before">
+                <h2>before</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="beforeButton">before</a>
+                    <img id="beforeMe" src="./assets/three-1.webp" alt="fade">
+                </div><!--
+             --><div class="contentContainer">
+                    <p>The before() method inserts specified content in front of (before) the selected elements.</p>
+                    <p>Example: Adds another image element before the image in the bottom.</p>
+                </div> 
+            </div>
+            <div id="after">
+                <h2>after</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="afterButton">after</a>
+                    <img id="afterMe" src="./assets/three-2.webp" alt="fade">
+                </div><!--
+             --><div class="contentContainer">
+                    <p>The after() method inserts specified content in after the selected elements.</p>
+                    <p>Example: Adds another image element after the image in the bottom.</p>
+                </div> 
+            </div>
+            <div id="append">
+                <h2>append</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="appendButton">append</a>
+                    <p><span id="appendMe">Village</span></p>
+                </div><!--
+             --><div class="contentContainer">
+                    <p>The append() method inserts specified content at the end of the selected elements. This is different from after(), as this modifies the content INSIDE of the element and not the after the element.</p>
+                    <p>Example: Add "88" to the paragraph text below the button.</p>
+                </div> 
+            </div>
+            <div id="html">
+                <h2>html</h2>
+                <div class="buttonContainer">
+                    <a href="#"  id="htmlButton">html</a>
+                    <p id="htmlMe">Change me into a button!</p>
+                </div><!--
+             --><div class="contentContainer">
+                    <p>The html() method sets or returns the content (innerHTML) of the selected elements. When this method is used to return content, it returns the content of the FIRST matched element. When this method is used to set content, it overwrites the content of ALL matched elements.</p>
+                    <p>Example: Change the HTML paragraph element to a button element.</p>
+                </div> 
+            </div>
+            <div id="attr">
+                <h2>attr</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="attrButton" data-secret="Hi cutie!">attr</a>
+                    <p id="attrHere"></p>
+                </div><!--
+             --><div class="contentContainer">
+                    <p>The attr() method sets or returns attributes and values of the selected elements.</p>
+                    <p>Example: Clicking the button will show the "data-secret" attribute of the button. The attr button on the left has a "data-secret" attribute that I put(you can inspect element to make sure).</p>
+                </div> 
+            </div>
+            <div id="val">
+                <h2>val</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="valButton">val</a>
+                    <input type="text" id="inputVal">
+                    <p><span>The Value of the input is:</span><span id="valHere"></span></p>
+                </div><!--
+             --><div class="contentContainer">
+                    <p>The val() method returns or sets the value attribute of the selected elements.</p>
+                    <p>Example: Type any text in the input. The val() method will get the value of the input.</p>
+                </div> 
+            </div>
+            <div id="text">
+                <h2>text</h2>
+                <div class="buttonContainer">
+                    <a href="#" id="textButton">text</a>
+                    <p><span>The text inside the button is:</span><span id="textHere"></span></p>
+                </div><!--
+             --><div class="contentContainer">
+                    <p>Get the combined text contents of each element in the set of matched elements, including their descendants, or set the text contents of the matched elements.</p>
+                    <p>Example: Get ALL of the "text" on the inside of the element.</p>
+                </div> 
+            </div>
+        </div>
+    </div>
+</body>
+</html>
